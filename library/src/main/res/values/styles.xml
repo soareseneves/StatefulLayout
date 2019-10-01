@@ -10,6 +10,8 @@
     <style name="stfProgress">
         <item name="android:layout_width">@dimen/stfProgressSize</item>
         <item name="android:layout_height">@dimen/stfProgressSize</item>
+        <item name="android:indeterminateTint">@android:color/white</item>
+        <item name="android:indeterminateTintMode">src_in</item>
     </style>
 
     <style name="stfImage">
