@@ -287,6 +287,12 @@ public class StatefulLayout
             stMessage.setVisibility(GONE);
         }
 
+        if (options.isLoading()) {
+            stProgress.setVisibility(VISIBLE);
+        } else {
+            stProgress.setVisibility(GONE);
+        }
+
         if (options.getImageRes() != 0) {
             stImage.setVisibility(VISIBLE);
             stImage.setImageResource(options.getImageRes());
