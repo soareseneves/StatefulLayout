@@ -287,28 +287,21 @@ public class StatefulLayout
             stMessage.setVisibility(GONE);
         }
 
-        if (options.isLoading()) {
-            stProgress.setVisibility(VISIBLE);
-            stImage.setVisibility(GONE);
-            stButton.setVisibility(GONE);
+        if (options.getImageRes() != 0) {
+            stImage.setVisibility(VISIBLE);
+            stImage.setImageResource(options.getImageRes());
         } else {
-            stProgress.setVisibility(GONE);
-            if (options.getImageRes() != 0) {
-                stImage.setVisibility(VISIBLE);
-                stImage.setImageResource(options.getImageRes());
-            } else {
-                stImage.setVisibility(GONE);
-            }
+            stImage.setVisibility(GONE);
+        }
 
-            if (options.getClickListener() != null) {
-                stButton.setVisibility(VISIBLE);
-                stButton.setOnClickListener(options.getClickListener());
-                if (!TextUtils.isEmpty(options.getButtonText())) {
-                    stButton.setText(options.getButtonText());
-                }
-            } else {
-                stButton.setVisibility(GONE);
+        if (options.getClickListener() != null) {
+            stButton.setVisibility(VISIBLE);
+            stButton.setOnClickListener(options.getClickListener());
+            if (!TextUtils.isEmpty(options.getButtonText())) {
+                stButton.setText(options.getButtonText());
             }
+        } else {
+            stButton.setVisibility(GONE);
         }
     }
 
