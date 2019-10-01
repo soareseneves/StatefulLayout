@@ -14,6 +14,7 @@ public class CustomStateOptions implements Serializable {
 
     @DrawableRes private int imageRes;
     private boolean isLoading;
+    private String title;
     private String message;
     private String buttonText;
     private View.OnClickListener buttonClickListener;
@@ -25,6 +26,11 @@ public class CustomStateOptions implements Serializable {
 
     public CustomStateOptions loading() {
         isLoading = true;
+        return this;
+    }
+
+    public CustomStateOptions title(String val) {
+        title = val;
         return this;
     }
 
@@ -49,6 +55,10 @@ public class CustomStateOptions implements Serializable {
 
     public boolean isLoading() {
         return isLoading;
+    }
+
+    public String getTitle() {
+        return title;
     }
 
     public String getMessage() {

@@ -50,6 +50,7 @@ public class StatefulLayout
     private LinearLayout stContainer;
     private ProgressBar stProgress;
     private ImageView stImage;
+    private TextView stTitle;
     private TextView stMessage;
     private Button stButton;
 
@@ -109,6 +110,7 @@ public class StatefulLayout
         stContainer = (LinearLayout) findViewById(R.id.stContainer);
         stProgress = (ProgressBar) findViewById(R.id.stProgress);
         stImage = (ImageView) findViewById(R.id.stImage);
+        stTitle = (TextView) findViewById(R.id.stTitle);
         stMessage = (TextView) findViewById(R.id.stMessage);
         stButton = (Button) findViewById(R.id.stButton);
     }
@@ -271,6 +273,13 @@ public class StatefulLayout
     // helper methods //
 
     private void state(CustomStateOptions options) {
+        if (!TextUtils.isEmpty(options.getTitle())) {
+            stTitle.setVisibility(VISIBLE);
+            stTitle.setText(options.getTitle());
+        } else {
+            stTitle.setVisibility(GONE);
+        }
+
         if (!TextUtils.isEmpty(options.getMessage())) {
             stMessage.setVisibility(VISIBLE);
             stMessage.setText(options.getMessage());

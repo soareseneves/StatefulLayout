@@ -1,39 +1,49 @@
 <merge
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+xmlns:app="http://schemas.android.com/apk/res-auto"
     >
 
-    <LinearLayout
-        android:id="@+id/stContainer"
-        style="@style/stfContainer"
-        android:visibility="gone"
-        tools:visibility="visible"
-        >
+<LinearLayout
+    android:id="@+id/stContainer"
+    style="@style/stfContainer"
+    android:visibility="gone"
+    tools:visibility="visible"
+    >
 
-        <ProgressBar
-            android:id="@+id/stProgress"
-            style="@style/stfProgress"
-            />
+    <ProgressBar
+        android:id="@+id/stProgress"
+        style="@style/stfProgress"
+        />
 
-        <ImageView
-            android:id="@+id/stImage"
-            app:srcCompat="@drawable/stf_ic_error"
-            style="@style/stfImage"
-            />
+    <ImageView
+        android:id="@+id/stImage"
+        app:srcCompat="@drawable/stf_ic_error"
+        style="@style/stfImage"
+        />
 
-        <TextView
-            android:id="@+id/stMessage"
-            android:text="@string/stfErrorMessage"
-            style="@style/stfMessage"
-            />
+    <TextView
+        android:id="@+id/stTitle"
+        style="@style/stfMessage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        android:visibility="gone" />
 
-        <Button
-            android:id="@+id/stButton"
-            android:text="@string/stfButtonText"
-            style="@style/stfButton"
-            />
+    <TextView
+        android:id="@+id/stMessage"
+        style="@style/stfMessage"
+        android:text="@string/stfErrorMessage"
+        android:textAlignment="center" />
 
-    </LinearLayout>
+    <Button
+        android:id="@+id/stButton"
+        android:text="@string/stfButtonText"
+        style="@style/stfButton"
+        />
+
+</LinearLayout>
 
 </merge>
